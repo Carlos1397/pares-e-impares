@@ -4,7 +4,8 @@ const port = 3000;
 app.set("view engine", "pug");
 app.set("views", "views");
 app.get('/', (req, res) => {
-    res.render('index')
+    const num = 50
+    res.render('index', { num })
 })
 app.use(function (err, req, res, next) {
     console.error(err.stack)
